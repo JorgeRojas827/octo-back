@@ -22,6 +22,7 @@
       "@application/*": ["application/*"],
       "@infrastructure/*": ["infrastructure/*"],
       "@domain/*": ["domain/*"],
+      "@lib/*": ["lib/*"],
     }
   }
 }

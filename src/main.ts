@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { swaggerConfigGenerator } from '__lib__/swagger-config';
+import { swaggerConfigGenerator } from '@lib/swagger-config';
 
 async function bootstrap() {
   const logger = new Logger('Main');
