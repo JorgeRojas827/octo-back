@@ -20,10 +20,15 @@ const throttleEnvSchema = z.object({
   THROTTLE_TTL: z.string().transform(Number),
 });
 
+const langEnvSchema = z.object({
+  DEFAULT_LANG: z.string(),
+});
+
 export const envSchema = z.object({
   ...appEnvSchema.shape,
   ...dbEnvSchema.shape,
   ...throttleEnvSchema.shape,
+  ...langEnvSchema.shape,
 });
 
 export type TEnv = z.infer<typeof envSchema>;

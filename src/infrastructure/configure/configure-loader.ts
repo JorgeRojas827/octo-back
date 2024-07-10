@@ -17,6 +17,9 @@ export const env = {
       limit: 'THROTTLE_LIMIT',
       ttl: 'THROTTLE_TTL',
     },
+    lang: {
+      defaultLang: 'DEFAULT_LANG',
+    },
   },
 };
 
