@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthMiddleware } from './auth.middleware';
-import { AuthService } from './auth.service';
+import { AuthService } from '../service/auth.service';
 import { UnauthorizedException, HttpStatus } from '@nestjs/common';
 import { Request, Response } from 'express';
 
