@@ -17,12 +17,12 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "@application/*": ["application/*"],
-      "@infrastructure/*": ["infrastructure/*"],
-      "@domain/*": ["domain/*"],
-      "@lib/*": ["lib/*"],
+      "@application/*": ["src/application/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@domain/*": ["src/domain/*"],
+      "@lib/*": ["src/lib/*"],
     }
   }
 }
