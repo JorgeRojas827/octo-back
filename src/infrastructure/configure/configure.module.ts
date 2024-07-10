@@ -1,20 +1,19 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { configOptions } from './configure-options';
+import { env } from './configure-loader';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      envFilePath: '.env',
-    }),
+    ConfigModule.forRoot(configOptions),
     ThrottlerModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => [
         {
-          ttl: configService.get<number>('THROTTLE_TTL'),
-          limit: configService.get<number>('THROTTLE_LIMIT'),
+          ttl: configService.get<number>(env.config.throttle.ttl),
+          limit: configService.get<number>(env.config.throttle.limit),
         },
       ],
     }),
